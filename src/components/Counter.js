@@ -53,13 +53,13 @@ export default function Counter() {
 	const [count, setCount] = useState(0);
 
 	const increment = () => {
-		/* STEP 4 */
+		setCount(count + 1);
 	};
 	const decrement = () => {
-		/* STEP 5 */
+		setCount(count - 1);
 	};
 	const reset = () => {
-		/* STEP 6 */
+		setCount(0);
 	};
 
 	const style = {
@@ -75,13 +75,13 @@ export default function Counter() {
 				Number {count} is {count % 2 == 0 ? 'even' : 'odd'}
 			</div>
 			<div>
-				<button id='increment' onClick={() => setCount(count + 1)}>
+				<button id='increment' onClick={increment}>
 					Increment
 				</button>
-				<button id='decrement' onClick={() => setCount(count - 1)}>
+				<button id='decrement' onClick={decrement}>
 					Decrement
 				</button>
-				<button id='resetCount' onClick={() => setCount(0)}>
+				<button id='resetCount' onClick={reset}>
 					Reset
 				</button>
 			</div>
