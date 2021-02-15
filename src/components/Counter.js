@@ -49,7 +49,9 @@ STEP 6:
 import React, { useState } from 'react'; /* STEP 0 */
 
 export default function Counter() {
-	const [count, setCount] = useState(0);
+	const [count, setCount] = useState(() => {
+		return 0;
+	});
 
 	const increment = () => {
 		setCount((prevCount) => prevCount + 1);
