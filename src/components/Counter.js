@@ -75,13 +75,13 @@ export default function Counter() {
 				Number {count} is {count % 2 == 0 ? 'even' : 'odd'}
 			</div>
 			<div>
-				<button id='increment' onClick={increment}>
+				<button id='increment' onClick={() => setCount(count + 1)}>
 					Increment
 				</button>
-				<button id='decrement' onClick={decrement}>
+				<button id='decrement' onClick={() => setCount(count - 1)}>
 					Decrement
 				</button>
-				<button id='resetCount' onClick={reset}>
+				<button id='resetCount' onClick={() => setCount(0)}>
 					Reset
 				</button>
 			</div>
